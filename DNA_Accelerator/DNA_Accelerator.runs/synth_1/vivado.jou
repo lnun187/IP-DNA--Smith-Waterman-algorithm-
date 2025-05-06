@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue May  6 23:27:23 2025
+# Process ID         : 9212
+# Current directory  : E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.runs/synth_1
+# Command line       : vivado.exe -log DNA_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DNA_top.tcl
+# Log file           : E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.runs/synth_1/DNA_top.vds
+# Journal file       : E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-5L7SU2D
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12500H
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16870 MB
+# Swap memory        : 8105 MB
+# Total Virtual      : 24975 MB
+# Available Virtual  : 3375 MB
+#-----------------------------------------------------------
+source DNA_top.tcl -notrace

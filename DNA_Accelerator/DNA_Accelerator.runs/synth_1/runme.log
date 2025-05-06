@@ -1,0 +1,546 @@
+
+*** Running vivado
+    with args -log DNA_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DNA_top.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue May  6 23:27:23 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source DNA_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/utils_1/imports/synth_1/DNA_PE.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/utils_1/imports/synth_1/DNA_PE.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top DNA_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10824
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1073.895 ; gain = 467.137
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'start_o', assumed default net type 'wire' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_top.v:102]
+INFO: [Synth 8-6157] synthesizing module 'DNA_top' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FIFO' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/FIFO.v:22]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'register_file' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/register_file.v:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/register_file.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fifo_ctrl' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/fifo_ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_ctrl' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/fifo_ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/FIFO.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized0' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized0' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized1' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized1' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized2' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized2' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized3' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized3' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized4' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized4' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized5' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized5' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized6' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized6' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized7' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized7' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized8' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized8' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized9' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized9' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized10' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized10' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized11' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized11' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized12' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized12' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized13' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized13' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_PE__parameterized14' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+	Parameter ID bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DNA_PE__parameterized14' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_PE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'enable' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/enable.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'enable' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/enable.v:23]
+INFO: [Synth 8-6157] synthesizing module 'posedge_detection' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/posedge_detection.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'posedge_detection' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/posedge_detection.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DNA_mem' [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_mem.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'DNA_mem' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_mem.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'DNA_top' (0#1) [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_top.v:23]
+WARNING: [Synth 8-7137] Register w_ptr_reg in module fifo_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/fifo_ctrl.v:40]
+WARNING: [Synth 8-3848] Net ref_empty in module/entity DNA_top does not have driver. [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_top.v:34]
+WARNING: [Synth 8-3848] Net matrix_full in module/entity DNA_top does not have driver. [E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.srcs/sources_1/new/DNA_top.v:35]
+WARNING: [Synth 8-3917] design DNA_top has port i_i[31] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[30] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[29] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[28] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[27] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[26] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[25] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[24] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[23] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[22] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[21] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[20] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[19] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[18] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[17] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[16] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[15] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[14] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[13] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[12] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[11] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[10] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[9] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[8] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[7] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[6] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[5] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[4] driven by constant 0
+WARNING: [Synth 8-7129] Port r_addr[31] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[30] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[29] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[28] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[27] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[26] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[25] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[24] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[23] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[22] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[21] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[20] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[19] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[18] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[17] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[16] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[15] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[14] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[13] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[12] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[11] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[10] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[9] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[8] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port r_addr[7] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[31] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[30] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[29] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[28] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[27] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[26] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[25] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[24] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[23] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[22] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[21] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[20] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[19] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[18] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[17] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[16] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[15] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[14] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[13] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[12] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[11] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[10] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[9] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[8] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port w_addr[7] in module register_file is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ref_empty in module DNA_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port matrix_full in module DNA_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1220.457 ; gain = 613.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1220.457 ; gain = 613.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1220.457 ; gain = 613.699
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.262 . Memory (MB): peak = 1220.457 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Vivado project/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [E:/Vivado project/Arty-Z7-20-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Vivado project/Arty-Z7-20-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DNA_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/DNA_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1310.559 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1310.559 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.559 ; gain = 703.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.559 ; gain = 703.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.559 ; gain = 703.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+got a mismatch DNA_PE
+Is not a child genome
+got a mismatch DNA_PE__parameterized0
+got a mismatch DNA_PE__parameterized1
+got a mismatch DNA_PE__parameterized2
+got a mismatch DNA_PE__parameterized3
+got a mismatch DNA_PE__parameterized4
+got a mismatch DNA_PE__parameterized5
+got a mismatch DNA_PE__parameterized6
+got a mismatch DNA_PE__parameterized7
+got a mismatch DNA_PE__parameterized8
+got a mismatch DNA_PE__parameterized9
+got a mismatch DNA_PE__parameterized10
+got a mismatch DNA_PE__parameterized11
+got a mismatch DNA_PE__parameterized12
+got a mismatch DNA_PE__parameterized13
+got a mismatch DNA_PE__parameterized14
+WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1310.559 ; gain = 703.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1310.559 ; gain = 703.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 1310.559 ; gain = 703.801
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 179   
+	   3 Input   32 Bit       Adders := 48    
+	   2 Input    4 Bit       Adders := 35    
+	   2 Input    2 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 308   
+	                4 Bit    Registers := 18    
+	                2 Bit    Registers := 33    
+	                1 Bit    Registers := 39    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1024  
+	   2 Input    4 Bit        Muxes := 33    
+	   2 Input    1 Bit        Muxes := 258   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design DNA_top has port i_i[31] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[30] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[29] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[28] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[27] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[26] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[25] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[24] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[23] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[22] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[21] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[20] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[19] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[18] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[17] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[16] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[15] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[14] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[13] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[12] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[11] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[10] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[9] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[8] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[7] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[6] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[5] driven by constant 0
+WARNING: [Synth 8-3917] design DNA_top has port i_i[4] driven by constant 0
+WARNING: [Synth 8-7129] Port ref_empty in module DNA_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port matrix_full in module DNA_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:02:34 . Memory (MB): peak = 1446.449 ; gain = 839.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------+---------------------------------------------------+-----------+----------------------+--------------+
+|Module Name      | RTL Object                                        | Inference | Size (Depth x Width) | Primitives   | 
++-----------------+---------------------------------------------------+-----------+----------------------+--------------+
+|\dataGen[15].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[15].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[0].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[0].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[1].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[1].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[2].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[2].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[3].PE/prv_sc_mem/reg_file_unit/memory_reg | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[3].PE/sc_mem/reg_file_unit/memory_reg     | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[5].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[5].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[4].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[4].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[7].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[7].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[6].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[6].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[9].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[9].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[10].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[10].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[11].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[11].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[8].PE/prv_sc_mem/reg_file_unit/memory_reg | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[8].PE/sc_mem/reg_file_unit/memory_reg     | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[12].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[12].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[14].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[14].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[13].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[13].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
++-----------------+---------------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:02:42 . Memory (MB): peak = 1465.957 ; gain = 859.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:12 ; elapsed = 00:03:59 . Memory (MB): peak = 1957.988 ; gain = 1351.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------+---------------------------------------------------+-----------+----------------------+--------------+
+|Module Name      | RTL Object                                        | Inference | Size (Depth x Width) | Primitives   | 
++-----------------+---------------------------------------------------+-----------+----------------------+--------------+
+|\dataGen[15].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[15].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[3].PE/prv_sc_mem/reg_file_unit/memory_reg | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[3].PE/sc_mem/reg_file_unit/memory_reg     | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[5].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[5].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[4].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[4].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[7].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[7].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[6].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[6].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[9].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[9].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[10].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[10].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[11].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[11].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[12].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[12].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[14].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[14].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[13].PE  | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[13].PE  | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[0].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[0].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[1].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[1].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[2].PE   | prv_sc_mem/reg_file_unit/memory_reg               | Implied   | 128 x 32             | RAM64M x 22  | 
+|\dataGen[2].PE   | sc_mem/reg_file_unit/memory_reg                   | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[8].PE/prv_sc_mem/reg_file_unit/memory_reg | Implied   | 128 x 32             | RAM64M x 22  | 
+|DNA_top          | dataGen[8].PE/sc_mem/reg_file_unit/memory_reg     | Implied   | 128 x 32             | RAM64M x 22  | 
++-----------------+---------------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:18 ; elapsed = 00:04:08 . Memory (MB): peak = 1965.590 ; gain = 1358.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:22 ; elapsed = 00:04:17 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:22 ; elapsed = 00:04:17 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:25 ; elapsed = 00:04:22 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:25 ; elapsed = 00:04:23 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:04:24 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:26 ; elapsed = 00:04:24 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |  2851|
+|3     |LUT1   |   903|
+|4     |LUT2   |  6089|
+|5     |LUT3   |  2733|
+|6     |LUT4   |  3524|
+|7     |LUT5   |  1904|
+|8     |LUT6   | 17174|
+|9     |MUXF7  |  1456|
+|10    |MUXF8  |   648|
+|11    |RAM64M |   704|
+|12    |FDCE   | 11063|
+|13    |FDPE   |  1241|
+|14    |FDRE   |     2|
+|15    |LDC    |  1024|
+|16    |IBUF   |    83|
+|17    |OBUF   |   742|
+|18    |OBUFT  |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:26 ; elapsed = 00:04:24 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:21 ; elapsed = 00:04:20 . Memory (MB): peak = 1971.152 ; gain = 1274.293
+Synthesis Optimization Complete : Time (s): cpu = 00:02:26 ; elapsed = 00:04:25 . Memory (MB): peak = 1971.152 ; gain = 1364.395
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.809 . Memory (MB): peak = 1971.152 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6683 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1971.152 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1728 instances were transformed.
+  LDC => LDCE: 1024 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 704 instances
+
+Synth Design complete | Checksum: d5cd0777
+INFO: [Common 17-83] Releasing license: Synthesis
+65 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:34 ; elapsed = 00:04:59 . Memory (MB): peak = 1971.152 ; gain = 1598.406
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1971.152 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/Vivado project/IP-DNA--Smith-Waterman-algorithm-/DNA_Accelerator/DNA_Accelerator.runs/synth_1/DNA_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1971.152 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file DNA_top_utilization_synth.rpt -pb DNA_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May  6 23:32:48 2025...
