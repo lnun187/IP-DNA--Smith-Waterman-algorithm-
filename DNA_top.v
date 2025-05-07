@@ -31,8 +31,8 @@ module DNA_top(
     input [31:0] ref_32_i,
     input [31:0] read_32_i,
     output en_o,
-    output ref_empty,
-    output matrix_full,
+    output reg ref_empty,
+    output reg matrix_full,
     output W_matrix,
     output [31:0] addr_ref_o,
     output [31:0] addr_read_o,
@@ -60,7 +60,7 @@ module DNA_top(
     parameter addr_start_ref = 0;
     parameter addr_end_ref = 1;
     parameter addr_start_matrix = 0;
-    parameter addr_end_matrix = 128;
+    parameter addr_end_matrix = 30;
     reg [31:0] addr_ref_reg, addr_read_reg, addr_matrix_reg;
     reg W_matrix1;
     reg nxt;
@@ -68,6 +68,7 @@ module DNA_top(
     reg R_ref, R_read;
     reg [3:0] count;
     reg [31:0] addr_ref_next, addr_read_next, addr_matrix_next;
+    reg setup;
     wire [1:0] read_2, ref_2;
     reg [1:0] count_1_times; // Chỉ cần 2 bit là đủ đếm tới 2
     wire [31:0] matrix1_o0 [15:0];
@@ -87,16 +88,18 @@ module DNA_top(
     wire [31:0] matrix1_o14 [15:0];
     wire [31:0] matrix1_o15 [15:0];
     wire [1:0] ref [15:0];
-    wire [31:0] read_prv [15:0];
-    wire [31:0] read [15:0];
+//    wire [31:0] read_prv [15:0];
+//    wire [31:0] read [15:0];
     wire [31:0] score [15:0];
     wire signal, signal_o;
-    wire [3:0] idx [15:0];
+//    wire [3:0] idx [15:0];
     assign signal = (addr_ref_reg == addr_start_ref && addr_read_reg == addr_start_read) || addr_matrix_reg == addr_start_matrix;
     assign addr_ref_o = addr_ref_reg;
     assign addr_read_o = addr_read_reg;
     assign addr_matrix_o = addr_matrix_reg;
     assign W_matrix = W_matrix1 & en_o;
+//    assign matrix_full = addr_matrix_reg == addr_end_matrix && setup;
+//    assign ref_empty = addr_ref_reg == addr_start_ref && addr_read_reg == addr_start_read && setup;
     enable e(
     .clk(clk),
     .rst(rst),
@@ -209,6 +212,9 @@ module DNA_top(
             W_matrix1 <= 1'b0;
             nxt <= 1'b0;
             nxt1 <= 1'b0;
+            setup <= 1'b0;
+            matrix_full <= 1'b0;
+            ref_empty <= 1'b0;
         end else if(en_o) begin
             count <= count + 1'b1;
             nxt <= ~(addr_read_reg == (addr_start_read + 1)) && ~(ADDR_WIDTH == 0);
@@ -217,7 +223,10 @@ module DNA_top(
             if(R_read) addr_read_reg <= addr_read_next;
             if (count == 4'd15)count_1_times <= count_1_times + 1'b1;
             if(count_1_times == 2'd2) W_matrix1 <= 1'b1;
+            if(W_matrix1) setup <= 1'b1;
             if(W_matrix) addr_matrix_reg <= addr_matrix_next;
+            matrix_full <= addr_matrix_reg == addr_start_matrix && setup;
+            ref_empty <= addr_ref_reg == addr_start_ref && addr_read_reg == addr_start_read && setup;
         end
     end
 endmodule
