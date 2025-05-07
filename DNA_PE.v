@@ -49,8 +49,8 @@ module DNA_PE #(parameter ID = 32'b0)(
     output [31:0] matrix_o13,
     output [31:0] matrix_o14,
     output [31:0] matrix_o15
-//    output [31:0] read_prv,
-//    output [31:0] read,
+//    output reg [31:0] read_prv_reg,
+//    output reg [31:0] read_score_reg,
 //    output reg [3:0] i
     );
     reg [1:0] ref_reg;
@@ -63,8 +63,9 @@ module DNA_PE #(parameter ID = 32'b0)(
     reg [31:0] b;
     reg [31:0] c;
     reg [31:0] d;
-    wire [31:0] read_prv;
-    wire [31:0] read;
+    reg [31:0] read_prv_reg;
+    reg [31:0] read_score_reg;
+    wire [31:0] read_prv, read;
     reg [31:0] tmpa;
     reg [31:0] tmpb;
     reg [31:0] tmpd;
@@ -99,13 +100,14 @@ module DNA_PE #(parameter ID = 32'b0)(
     FIFO #(.DATA_WIDTH(32))
         sc_mem (
         .clk(clk), .reset(rst), .en(en_i), .ADDR_WIDTH(ADDR_WIDTH),
-        .wr(i == 15), .w_data(d), 
-        .rd(i == 0), .r_data(read));
+        .wr(i == 5), .w_data({score[15]}),
+        .rd(i == 0), .r_data({read})
+        );
         
     always @(*) begin
-        tmpa = (i == 4'd0) ? read_prv : sc_reg;
+        tmpa = (i == 4'd0) ? read_prv_reg : sc_reg;
         a = (ref_reg == read_reg) ? tmpa + match : ((tmpa > mismatch) ? tmpa - mismatch : 32'd0);
-        tmpb = (i == 0) ? read : score[i - 1];
+        tmpb = (i == 0) ? read_score_reg : score[i - 1];
         b = tmpb > gap ? tmpb - gap : 32'd0;
         c = (score_i > gap) ? score_i - gap : 32'd0;
         tmpd = (a > b) ? a : b;
@@ -134,12 +136,16 @@ module DNA_PE #(parameter ID = 32'b0)(
             score[13] <= 32'd0;
             score[14] <= 32'd0;
             score[15] <= 32'd0;
+            read_score_reg <= 32'd0;
+            read_prv_reg <= 32'd0;
         end else if(en_i) begin
             ref_reg <= ref_2_i;
             if(i == 'd15) read_reg <= read_2_i;
             sc_reg <= score_i;
             score[i] <= d;
             i <= i_next;
+            read_score_reg <= read;
+            read_prv_reg <= read_prv;
         end
     end
     

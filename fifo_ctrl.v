@@ -52,7 +52,8 @@ module fifo_ctrl(
         w_ptr_next = w_ptr;
         r_ptr_next = r_ptr;
         if(wr) w_ptr_next = w_ptr ==  2 ** ADDR_WIDTH - 1 ? 'b0 : w_ptr + 'b1;
-        if(rd) r_ptr_next = r_ptr + 1'b1 == w_ptr ? r_ptr : (r_ptr ==  2 ** ADDR_WIDTH - 1 ? 'b0 : r_ptr + 'b1);
+        if(rd) r_ptr_next = (r_ptr ==  2 ** ADDR_WIDTH - 1) ? 'b0 : r_ptr + 'b1;
+//        if(rd) r_ptr_next = r_ptr + 1'b1 == w_ptr ? r_ptr : (r_ptr ==  2 ** ADDR_WIDTH - 1 ? 'b0 : r_ptr + 'b1);
     end
 
     //output

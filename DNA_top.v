@@ -90,9 +90,10 @@ module DNA_top(
     wire [1:0] ref [15:0];
 //    wire [31:0] read_prv [15:0];
 //    wire [31:0] read [15:0];
+//    wire [3:0] idx [15:0];
     wire [31:0] score [15:0];
     wire signal, signal_o;
-//    wire [3:0] idx [15:0];
+    
     assign signal = (addr_ref_reg == addr_start_ref && addr_read_reg == addr_start_read) || addr_matrix_reg == addr_start_matrix;
     assign addr_ref_o = addr_ref_reg;
     assign addr_read_o = addr_read_reg;
@@ -150,7 +151,7 @@ module DNA_top(
                 .matrix_o4(matrix1_o4[i]), .matrix_o5(matrix1_o5[i]), .matrix_o6(matrix1_o6[i]), .matrix_o7(matrix1_o7[i]),
                 .matrix_o8(matrix1_o8[i]), .matrix_o9(matrix1_o9[i]), .matrix_o10(matrix1_o10[i]), .matrix_o11(matrix1_o11[i]),
                 .matrix_o12(matrix1_o12[i]), .matrix_o13(matrix1_o13[i]), .matrix_o14(matrix1_o14[i]), .matrix_o15(matrix1_o15[i])
-//                .read_prv(read_prv[i]), .read(read[i]), .i(idx[i])
+//                .read_prv_reg(read_prv[i]), .read_score_reg(read[i]), .i(idx[i])
             );
         end
     endgenerate
@@ -175,26 +176,26 @@ module DNA_top(
 //        read_i = read[|count ? count - 'b1 : 15];
 //        read_prv_i = read_prv[|count ? count - 'b1 : 15];
 //        i_i = idx[|count ? count - 'b1 : 15];
-//        matrix_o0  = matrix1_o0[14];
-//        matrix_o1  = matrix1_o1[14];
-//        matrix_o2  = matrix1_o2[14];
-//        matrix_o3  = matrix1_o3[14];
-//        matrix_o4  = matrix1_o4[14];
-//        matrix_o5  = matrix1_o5[14];
-//        matrix_o6  = matrix1_o6[14];
-//        matrix_o7  = matrix1_o7[14];
-//        matrix_o8  = matrix1_o8[14];
-//        matrix_o9  = matrix1_o9[14];
-//        matrix_o10 = matrix1_o10[14];
-//        matrix_o11 = matrix1_o11[14];
-//        matrix_o12 = matrix1_o12[14];
-//        matrix_o13 = matrix1_o13[14];
-//        matrix_o14 = matrix1_o14[14];
-//        matrix_o15 = matrix1_o15[14];
-//        score_i    = score[14];
-//        read_i     = read[14];
-//        read_prv_i = read_prv[14];
-//        i_i = idx[14];
+//matrix_o0  = matrix1_o0[9];
+//matrix_o1  = matrix1_o1[9];
+//matrix_o2  = matrix1_o2[9];
+//matrix_o3  = matrix1_o3[9];
+//matrix_o4  = matrix1_o4[9];
+//matrix_o5  = matrix1_o5[9];
+//matrix_o6  = matrix1_o6[9];
+//matrix_o7  = matrix1_o7[9];
+//matrix_o8  = matrix1_o8[9];
+//matrix_o9  = matrix1_o9[9];
+//matrix_o10 = matrix1_o10[9];
+//matrix_o11 = matrix1_o11[9];
+//matrix_o12 = matrix1_o12[9];
+//matrix_o13 = matrix1_o13[9];
+//matrix_o14 = matrix1_o14[9];
+//matrix_o15 = matrix1_o15[9];
+//score_i    = score[9];
+//read_i     = read[9];
+//read_prv_i = read_prv[9];
+//i_i = idx[9];
         addr_ref_next = addr_ref_reg == addr_end_ref ? addr_start_ref : addr_ref_reg + 'b1;
         addr_read_next = addr_read_reg == (addr_start_read + 2**ADDR_WIDTH - 1) ? addr_start_read : addr_read_reg + 'b1;
         addr_matrix_next = addr_matrix_reg == addr_end_matrix ? addr_start_matrix : addr_matrix_reg + 'd1;

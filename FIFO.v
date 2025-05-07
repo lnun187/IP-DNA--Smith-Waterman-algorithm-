@@ -31,13 +31,14 @@ module FIFO #(DATA_WIDTH = 8)(
     );
 
     //signal
-    reg done;
+    reg [127:0] done;
     wire [31 : 0] w_addr, r_addr;
-    wire [31 : 0] data_r;
-    assign r_data = done ? data_r : 'b0;
+    wire [DATA_WIDTH - 1 : 0] data_r;
+    assign r_data = done[r_addr] ? data_r : 'b0;
+//    assign r_data = data_r;
     always @(posedge clk, posedge reset) begin
         if(reset) done = 1'b0;
-        else if(en && (w_addr == 2 ** ADDR_WIDTH - 2)) done = 1'b1;
+        else if(en & wr) done[w_addr] = 1'b1;
     end
     //instantiate registers file
     register_file #(.DATA_WIDTH(DATA_WIDTH))

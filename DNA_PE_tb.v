@@ -33,7 +33,7 @@ module DNA_PE_tb;
     reg [2:0] match;
     reg [2:0] mismatch;
     reg [2:0] gap;
-
+    
     // Outputs
     wire [31:0] score_o;
     wire [1:0] ref_2_o;
@@ -41,15 +41,18 @@ module DNA_PE_tb;
     wire [31:0] matrix_o4, matrix_o5, matrix_o6, matrix_o7;
     wire [31:0] matrix_o8, matrix_o9, matrix_o10, matrix_o11;
     wire [31:0] matrix_o12, matrix_o13, matrix_o14, matrix_o15;
+    wire [31:0] read_prv, read;
+    wire [3:0] idx;
     integer i;
     // Instantiate the Unit Under Test (UUT)
-    DNA_PE #(.ID(2), .ADDR_WIDTH(1)) uut (
+    DNA_PE #(.ID(2)) uut (
         .clk(clk),
         .rst(rst),
         .en_i(en_i),
         .read_2_i(read_2_i),
         .ref_2_i(ref_2_i),
         .score_i(score_i),
+        .ADDR_WIDTH(1),
         .match(match),
         .mismatch(mismatch),
         .gap(gap),
@@ -59,6 +62,7 @@ module DNA_PE_tb;
         .matrix_o4(matrix_o4), .matrix_o5(matrix_o5), .matrix_o6(matrix_o6), .matrix_o7(matrix_o7),
         .matrix_o8(matrix_o8), .matrix_o9(matrix_o9), .matrix_o10(matrix_o10), .matrix_o11(matrix_o11),
         .matrix_o12(matrix_o12), .matrix_o13(matrix_o13), .matrix_o14(matrix_o14), .matrix_o15(matrix_o15)
+        , .read_prv(read_prv), .read(read), .i(idx)
     );
 
     // Clock generation
